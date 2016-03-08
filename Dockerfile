@@ -2,9 +2,9 @@ FROM java:8
 
 WORKDIR /usr/local/
 
-RUN wget http://divolte-releases.s3-website-eu-west-1.amazonaws.com/divolte-collector/0.3.0/distributions/divolte-collector-0.3.0.tar.gz && \
-    tar -xzvf divolte-collector-0.3.0.tar.gz --strip-components=1 && \
-    rm divolte-collector-0.3.0.tar.gz
+RUN wget https://github.com/divThis/divolte-collector/releases/download/divolte-collector-0.3.0.1-patched/divolte-collector-0.3.0.1-patched.tar.gz && \
+    tar -xzvf divolte-collector-0.3.0.1-patched.tar.gz --strip-components=1 && \
+    rm divolte-collector-0.3.0.1-patched.tar.gz
 
 ADD conf/divolte-collector.conf /usr/local/conf/
 
